@@ -3,57 +3,106 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Витакс</title>
+<title>Пример CSS оформления как на картинке</title>
 <style>
-  /* Сброс и базовые стили */
+  :root {
+    --bg-color: #18181b; /* тёмный фон */
+    --card-bg-color: #242529; /* цвет карточки чуть светлее */
+    --text-color: #eeeeee; /* светлый цвет текста */
+    --heading-color: #ffffff;
+    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --border-radius: 12px;
+    --gap: 20px;
+  }
 
+  body {
+    margin: 0;
+    background-color: var(--bg-color);
+    font-family: var(--font-family);
+    color: var(--text-color);
+    padding: 40px;
+    box-sizing: border-box;
+    min-height: 100vh;
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: var(--gap);
+  }
+
+  /* Общий стиль карточек */
+  .card {
+    background-color: var(--card-bg-color);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 12px rgb(0 0 0 / 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .card h2 {
+    font-size: 1.3rem;
+    margin: 0 0 10px 0;
+    color: var(--heading-color);
+    font-weight: 700;
+  }
+
+  .card p {
+    font-size: 0.93rem;
+    line-height: 1.4;
+    margin: 0 0 15px 0;
+    color: var(--text-color);
+  }
+
+  /* Изображение, с плавными скруглениями */
+  .card img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--border-radius);
+    object-fit: cover;
+  }
+
+  /* Для адаптивности */
+  @media (max-width: 600px) {
+    body {
+      padding: 20px;
+    }
+
+    .card {
+      padding: 15px;
+    }
+  }
 </style>
 </head>
 <body>
-  <header>
-    <div class="logo">⧉</div>
-    <nav>
-      <ul>
-        <li><a href="#">Главная</a></li>
-        <li><a href="#">Вики</a></li>
-        <li><a href="#">Магазин</a></li>
-        <li><a href="#">Карта сервера</a></li>
-      </ul>
-    </nav>
-    <button class="header-join-btn">Присоединиться</button>
-  </header>
+  <div class="container">
+    <section class="card">
+      <h2>Голосовой чат</h2>
+      <p>Благодаря модификации PlasmoVoice вы можете разговаривать с игроками находясь на сервере без сторонних программ.</p>
+    </section>
 
-  <main>
-    <div class="content-left">
-      <h1 class="gradient-text">
-        <span class="highlight-purple">Витакс</span> — то,<br/>
-        что нас <span class="highlight-purple">связывает</span>
-      </h1>
-      <p class="description">
-        Витакс — приватный ванильный сервер Minecraft, объединяющий игроков в чистом выживании и творчестве. Здесь рождаются дружба и общие приключения. Присоединяйтесь к нам!
-      </p>
-      <div class="buttons-group">
-        <button class="btn-join">Присоединиться</button>
-        <button class="btn-details">Подробнее</button>
-      </div>
-    </div>
-    <div class="content-right">
-      <img src="https://i.imgur.com/9vXTsU8.png" alt="Картинка с Minecraft персонажем" />
-      <!-- Можно заменить на свой URL -->
-    </div>
-  </main>
+    <section class="card">
+      <h2>Собственный ресурс пак</h2>
+      <p>У нас присутствует собственный уникальный текстур пак, который вы не встретите ни на каком сервере. Наша команда постоянно работает над его улучшением и добавлением новых важных текстур. Подробнее о текстур паке вы можете узнать в вики.</p>
+      <img src="https://i.imgur.com/7NjA1xC.png" alt="Собственный ресурс пак" />
+    </section>
 
-  <footer>
-    <div class="marquee" aria-label="Бегущая строка с ключевыми словами">
-      <span>Весёлый</span> <span class="star">★</span>
-      <span>Приватный</span> <span class="star">★</span>
-      <span>Витакс</span> <span class="star">★</span>
-      <span>Ламповый</span> <span class="star">★</span>
-      <span>Уютный</span> <span class="star">★</span>
-      <span>Весёлый</span> <span class="star">★</span>
-      <span>Приватный</span> <span class="star">★</span>
-      <span>Витакс</span>
-    </div>
-  </footer>
+    <section class="card">
+      <h2>О сервере</h2>
+      <p>Мы — проект прошедший длинный путь становления, начавший своё существование как сервер небольшого клана, впоследствии выросший в проект Horizon Of Cubes. Наш проект существует уже более двух лет. Каждый день мы радуем десятки игроков своей неповторимой дружественной атмосферой, уникальными ивентами и проектами от игроков, которые не дадут вам заскучать.</p>
+      <img src="https://i.imgur.com/7NjA1xC.png" alt="О сервере" />
+    </section>
+
+    <section class="card">
+      <h2>Эмоции</h2>
+      <p>С помощью модификации EmoteCraft вы можете ярко выражать свои эмоции на сервере.</p>
+    </section>
+
+  </div>
 </body>
 </html>

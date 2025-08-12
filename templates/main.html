@@ -10,11 +10,14 @@
     <body>
 
         <header>
+            <a href="/" class="logo">⧉</a>
+
             <nav>
                 <ul>
                     <a href="/">Главная</a>
                     <a href="/about">О нас</a>
                     <a href="/players">Игроки клана</a>
+                    <a href="/rating">Рейтинг</a>
                 </ul>
             </nav>
             <div class="buttons-group-header">
@@ -24,10 +27,16 @@
         </header>
 
         <main>
+            <div class="fog-layer">
+              <div class="fog-cloud cloud1"></div>
+              <div class="fog-cloud cloud2"></div>
+              <div class="fog-cloud cloud3"></div>
+              <div class="fog-cloud cloud4"></div>
+            </div>
             <div class="content-left">
                 <h1 class="gradient-text">
-                    <span class ="highlight-purple"> Eclipse(затмение)</span> —
-                    Клан на сервере <br/> <span class="highlight-purple">Horizon of Cubes.</span>
+                    <span class ="highlight-purple"> Eclipse</span> <br/>
+                    Клан на сервере <span class="highlight-purple">Horizon of Cubes.</span>
                 </h1>
                 <p class="description">
                     Eclipse — Клан на сервере Horizon of Cubes, объединяющий игроков в творчестве.
@@ -39,7 +48,7 @@
                 </div>
             </div>
             <div class="content-right">
-                <img src="{{ url_for('static', filename='player4.png') }}">
+                <img src="{{ url_for('static', filename='Untitled.png') }}">
             </div>
         </main>
         <footer>
