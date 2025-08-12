@@ -1,7 +1,7 @@
 {
   "build": [
     {
-      "src": "index.py"
+      "src": "index.py",
       "use": "@vercel/python"
     }
   ],
