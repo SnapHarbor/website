@@ -1,0 +1,248 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: radial-gradient(ellipse at bottom left, #12111f 0%, #0b0a12 75%);
+    color: white;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Навигация */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 32px;
+    background: rgba(54, 54, 98, 0.7);
+    backdrop-filter: blur(8px);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    border-radius: 21px;
+    margin-top: 1%;
+    width: 70%;
+    vertical-align: center;
+    left: 13%;
+
+    box-shadow: 0 0 8px rgba(202, 195, 229, 0.67);
+  }
+
+  /* Логотип */
+  .logo {
+    background: #1e1e3a;
+    border-radius: 12px;
+    width: 50px;
+    height: 50px;
+  }
+
+  /* Меню навигации */
+  nav {
+    flex-grow: 1;
+    margin-left: 40px;
+  }
+
+  nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+    list-style: none;
+  }
+
+  nav a {
+    color: #bbb;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+
+  nav a:hover {
+    color: #9b7ff5;
+  }
+
+  /* Кнопка "Присоединиться" в меню */
+  .header-join-btn {
+    padding: 10px 28px;
+    border-radius: 16px;
+    background: linear-gradient(90deg, #4c459a 0%, #6455b0 100%);
+    border: none;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+
+  .header-join-btn:hover {
+    background: linear-gradient(90deg, #6455b0 100%, #4c459a 0%);
+    box-shadow: 0 0 12px #a794ffcc;
+  }
+
+  /* Главный блок */
+  main {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 48px 60px 80px 60px;
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+
+  /* Левая часть с текстом */
+  .content-left {
+    max-width: 600px;
+  }
+
+  /* Заголовок с градиентом */
+  .gradient-text {
+    font-weight: 900;
+    font-size: 3.8rem;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+  }
+  .gradient-text .highlight-purple {
+    background: linear-gradient(90deg,  #5755ad, #6656b4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    box-shadow: #9b7ff5;
+  }
+  .gradient-text .highlight-white {
+    background: linear-gradient(90deg, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+
+  /* Описание под заголовком */
+  .description {
+    font-weight: 400;
+    opacity: 0.8;
+    line-height: 1.5;
+    margin-bottom: 30px;
+  }
+
+  /* Кнопки под описанием */
+  .buttons-group {
+    display: flex;
+    gap: 20px;
+  }
+
+  .buttons-group-header {
+    display: flex;
+    gap: 10px;
+  }
+  button {
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    padding: 14px 36px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: background 0.3s, box-shadow 0.3s;
+  }
+
+  .btn-join {
+    background: linear-gradient(90deg, #4c459a 0%, #6455b0 100%);
+    color: white;
+  }
+  .btn-join:hover {
+    background: linear-gradient(90deg, #6455b0 100%, #4c459a 0%);
+    box-shadow: 0 0 12px #a794ffcc;
+  }
+
+  .btn-details {
+    background: #252544;
+    color: #aaaaf0;
+  }
+  .btn-details:hover {
+    background: #3a3a6a;
+    color: white;
+    box-shadow: 0 0 10px #7c6ef2aa;
+  }
+
+  /* Правая часть - изображение */
+  .content-right {
+    max-width: 450px;
+    min-width: 300px;
+    margin-left: 40px;
+  }
+  .content-right img {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated; /* для пиксельной графики */
+    border-radius: 8px;
+  }
+
+  /* Нижний бегущий текст */
+  footer {
+    background: linear-gradient(90deg, #20203a, #2a2a54);
+    color: white;
+    font-weight: 700;
+    overflow: hidden;
+    white-space: nowrap;
+    user-select: none;
+
+  }
+
+  .marquee {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 15s linear infinite;
+    font-size: 1.1rem;
+    letter-spacing: 0.06em;
+  }
+  .marquee span {
+    margin: 0 18px;
+  }
+  .star {
+    margin: 0 12px 0 0;
+    color: #aaaaf0;
+  }
+
+  @keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+
+  /* Адаптив для мобильных устройств */
+  @media (max-width: 900px) {
+    main {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 30px 20px 50px 20px;
+    }
+    .content-left {
+      max-width: 100%;
+      text-align: center;
+      margin-top: 32px;
+    }
+    .gradient-text {
+      font-size: 2.8rem;
+    }
+    nav ul {
+      gap: 15px;
+    }
+    .content-right {
+      max-width: 300px;
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 480px) {
+    nav {
+      display: none; /* убираем навигацию на очень мелких экранах */
+    }
+    header {
+      justify-content: space-between;
+      padding: 12px 20px;
+    }
+    .header-join-btn {
+      padding: 8px 20px;
+      font-size: 0.9rem;
+    }
+  }

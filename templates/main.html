@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Eclipse</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    </head>
+    <body>
+
+        <header>
+            <nav>
+                <ul>
+                    <a href="/">Главная</a>
+                    <a href="/about">О нас</a>
+                    <a href="/players">Игроки клана</a>
+                </ul>
+            </nav>
+            <div class="buttons-group-header">
+                <button class="header-join-btn">Присоединится</button>
+                <button class="header-join-btn">Авторизация</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="content-left">
+                <h1 class="gradient-text">
+                    <span class ="highlight-purple"> Eclipse(затмение)</span> —
+                    Клан на сервере <br/> <span class="highlight-purple">Horizon of Cubes.</span>
+                </h1>
+                <p class="description">
+                    Eclipse — Клан на сервере Horizon of Cubes, объединяющий игроков в творчестве.
+                    Здесь рождаются дружба и общие приключения. Присоединяйтесь к нам!
+                </p>
+                <div class="buttons-group">
+                    <button class="btn-join">Присоединиться</button>
+                    <button class="btn-details">Подробнее</button>
+                </div>
+            </div>
+            <div class="content-right">
+                <img src="{{ url_for('static', filename='player4.png') }}">
+            </div>
+        </main>
+        <footer>
+        <div class="marquee" aria-label="Бегущая строка с ключевыми словами">
+          <span>Весёлый</span> <span class="star">🐒</span>
+          <span>Eclipse</span> <span class="star">🐒</span>
+          <span>Уютный</span> <span class="star">🐒</span>
+          <span>Eclipse</span> <span class="star">🐒</span>
+          <span>Весёлый</span> <span class="star">🐒</span>
+          <span>Eclipse</span>
+        </div>
+      </footer>
+    </body>
+</html>
