@@ -1,19 +1,11 @@
 {
-<<<<<<< Updated upstream
-  "builds": [
-        {
-            "src": "app.py",
-            "use": "@vercel/python"
-        }
-    ],
-=======
+
   "build": [
     {
       "src": "app.py",
       "use": "@vercel/python"
     }
   ],
->>>>>>> Stashed changes
   "routes": [
     {
       "src": "/(.*)",
